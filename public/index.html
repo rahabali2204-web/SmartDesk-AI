@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDesk AI | Customer Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>SmartDesk AI</h1>
+    <p>Intelligent Customer Support Automation</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Dashboard Statistics -->
+    <section class="stats-container">
+
+      <div class="stat-card">
+        <h3>Total Tickets</h3>
+        <p id="totalTickets">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Urgent Tickets</h3>
+        <p id="urgentTickets">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Other Tickets</h3>
+        <p id="otherTickets">0</p>
+      </div>
+
+    </section>
+
+    <!-- Customer Message -->
+    <section class="card">
+      <h2>Analyze Customer Message</h2>
+      <p>Enter a customer message below.</p>
+
+      <textarea
+        id="customerMessage"
+        placeholder="Example: I was charged twice for my order. Please help me."
+      ></textarea>
+
+      <button id="analyzeBtn" onclick="analyzeMessage()">
+        Analyze Message
+      </button>
+
+      <p id="status"></p>
+    </section>
+
+    <!-- AI Analysis Results -->
+    <section class="card results" id="results">
+      <h2>AI Analysis Results</h2>
+
+      <div class="result-item">
+        <strong>Category:</strong>
+        <span id="category">-</span>
+      </div>
+
+      <div class="result-item">
+        <strong>Sentiment:</strong>
+        <span id="sentiment">-</span>
+      </div>
+
+      <div class="result-item">
+        <strong>Priority:</strong>
+        <span id="priority" class="priority-badge">-</span>
+      </div>
+
+      <div class="result-item">
+        <strong>Summary:</strong>
+        <p id="summary">-</p>
+      </div>
+
+      <div class="reply">
+        <strong>AI Generated Reply:</strong>
+        <p id="reply">-</p>
+      </div>
+    </section>
+
+    <!-- Ticket History -->
+    <section class="card">
+      <h2>Customer Ticket History</h2>
+      <p>Your previously analyzed customer messages.</p>
+
+      <div id="ticketHistory">
+        <p>No tickets yet. Analyze your first customer message!</p>
+      </div>
+
+      <button id="clearHistoryBtn" onclick="clearHistory()">
+        Clear History
+      </button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
